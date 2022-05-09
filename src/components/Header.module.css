@@ -1,0 +1,26 @@
+header {
+  display: flex;
+  align-items: center;
+  flex-flow: row nowrap;
+  height: 4rem;
+  background-color: rgb(206, 211, 215);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 2rem;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  flex-flow: row nowrap;
+  list-style: none;
+}
+
+.links li {
+  margin: 1rem;
+}
