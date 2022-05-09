@@ -3,7 +3,8 @@ header {
   align-items: center;
   flex-flow: row nowrap;
   height: 4rem;
-  background-color: rgb(206, 211, 215);
+  background-color: honeydew;
+  border-bottom: 2px solid black;
 }
 
 nav {

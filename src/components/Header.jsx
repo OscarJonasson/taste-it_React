@@ -16,7 +16,7 @@ const Header = () => {
             <a href="#">Recipe</a>
           </li>
           <li>
-            <a href="#">add new Recipe</a>
+            <a href="#">Add new recipe</a>
           </li>
         </ul>
       </nav>

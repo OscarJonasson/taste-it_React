@@ -8,10 +8,29 @@ main {
   filter: grayscale(0.9) brightness(0.2);
   max-height: 70vh;
   object-fit: cover;
+  position: relative;
+  z-index: -1;
+}
+
+/* make the Ts a fork? */
+.intro {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-flow: column nowrap;
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  z-index: 10;
+  color: aliceblue;
+  width: 300px;
+  height: 200px;
+  line-height: 1.5;
 }
 
 .cards {
-  background-color: azure;
-  /* min-height: 50rem; */
-  width: 100%;
+  margin: 1rem 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
 }
