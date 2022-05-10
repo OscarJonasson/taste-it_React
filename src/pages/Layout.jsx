@@ -4,10 +4,10 @@ import Main from '../components/Main/Main';
 
 function Layout() {
   return (
-    <div className="content">
+    <>
       <Header />
       <Main />
-    </div>
+    </>
   );
 }
 

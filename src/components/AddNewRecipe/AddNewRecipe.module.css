@@ -1,0 +1,4 @@
+.separator {
+  display: flex;
+  flex-flow: row wrap;
+}
