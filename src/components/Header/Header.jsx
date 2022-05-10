@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import classes from './Header.module.css';
 
 const Header = () => {
@@ -7,22 +7,62 @@ const Header = () => {
     <header>
       <nav>
         <div className={classes.logo}>
-          <Link to="/">TasteIT🍆</Link>
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? classes.linkActive : classes.link
+            }
+            to="/"
+          >
+            TasteIT🍆
+          </NavLink>
         </div>
         <ul className={classes.links}>
           <li>
-            <Link to="/">Home</Link>
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? classes.linkActive : classes.link
+              }
+              to="/"
+            >
+              Home
+            </NavLink>
           </li>
           <li>
-            <Link to="/recipes">Recipes</Link>
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? classes.linkActive : classes.link
+              }
+              to="/recipes"
+            >
+              Recipes
+            </NavLink>
           </li>
           <li>
-            <Link to="/add-new-recipe">Add New Recipe</Link>
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? classes.linkActive : classes.link
+              }
+              to="/add-new-recipe"
+            >
+              Add New Recipe
+            </NavLink>
           </li>
         </ul>
       </nav>
     </header>
   );
 };
+
+// <NavLink
+
+// to="/recipes"
+
+// className={({ isActive }) => (isActive ? "linkactive" : "link")}
+
+// >
+
+// Recipes
+
+// </NavLink>
 
 export default Header;

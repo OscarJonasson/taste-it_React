@@ -3,8 +3,11 @@ header {
   align-items: center;
   flex-flow: row nowrap;
   height: 4rem;
-  background-color: honeydew;
+  background-color: rgb(150, 150, 150);
   border-bottom: 2px solid black;
+}
+a {
+  text-decoration: none;
 }
 
 nav {
@@ -20,6 +23,13 @@ nav {
   align-items: center;
   flex-flow: row nowrap;
   list-style: none;
+}
+
+.link {
+  color: white;
+}
+.linkActive {
+  color: red;
 }
 
 .links li {
