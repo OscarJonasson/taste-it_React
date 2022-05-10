@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import classes from './Card.module.css';
 function Card(props) {
   return (
@@ -8,7 +9,7 @@ function Card(props) {
         in ipsum repellat cum suscipit ipsam veniam commodi. Assumenda porro
         magni, placeat obcaecati in aliquam optio nostrum a et quam.
       </p>
-      <a href="#">{props.linkName}</a>
+      <Link to={props.link}>{props.linkName}</Link>
     </div>
   );
 }
