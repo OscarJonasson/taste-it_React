@@ -3,8 +3,16 @@ header {
   align-items: center;
   flex-flow: row nowrap;
   height: 4rem;
-  background-color: rgb(150, 150, 150);
-  border-bottom: 2px solid black;
+  background-image: linear-gradient(
+    180deg,
+    rgb(86, 86, 86),
+    rgb(98, 98, 98),
+    rgb(100, 100, 100),
+    rgb(98, 98, 98),
+    rgb(86, 86, 86)
+  );
+  position: sticky;
+  top: 0;
 }
 a {
   text-decoration: none;

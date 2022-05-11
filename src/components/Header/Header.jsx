@@ -53,16 +53,4 @@ const Header = () => {
   );
 };
 
-// <NavLink
-
-// to="/recipes"
-
-// className={({ isActive }) => (isActive ? "linkactive" : "link")}
-
-// >
-
-// Recipes
-
-// </NavLink>
-
 export default Header;

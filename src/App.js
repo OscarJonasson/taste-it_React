@@ -14,10 +14,7 @@ function App() {
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
             <Route path="recipes" element={<Recipes />} />
-            <Route
-              path="recipes/:recipe"
-              element={<Recipe foodName="Beef" />}
-            />
+            <Route path="recipes/:recipe" element={<Recipe />} />
             <Route path="add-new-recipe" element={<AddNewRecipe />} />
           </Route>
         </Routes>

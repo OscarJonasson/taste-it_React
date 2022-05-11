@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import classes from './RecipeCard.module.css';
 function RecipeCard(props) {
@@ -9,13 +10,8 @@ function RecipeCard(props) {
         alt={props.foodName}
       ></img>
       <h4>{props.foodName}</h4>
-      <p className={classes.recipeCard__desc}>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt
-        nostrum eos ut optio, autem repudiandae quo consequatur accusamus
-        numquam dolor dolore distinctio? Illo maxime rem deleniti quas
-        voluptates, voluptas iste.
-      </p>
-      <Link className={classes.recipeCard__link} to={props.foodName}>
+      <p className={classes.recipeCard__desc}>{props.description}</p>
+      <Link className={classes.recipeCard__link} to={`${props.link}`}>
         See More
       </Link>
     </div>

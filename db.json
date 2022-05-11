@@ -1,9 +1,35 @@
 {
-  "posts": [
+  "recipe": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "name": "Burger",
+      "author": "Gunther",
+      "description": "A succulent and mouth melting fusion between bread and beef",
+      "image": "urlurl",
+      "ingredients": [
+        {
+          "type": "Beef",
+          "amount": "400gr"
+        },
+        {
+          "type": "Bread",
+          "amount": "2 Buns"
+        }
+      ],
+      "instructions": "Loosely pack the meat and smash it on a smoking hot skillet"
+    },
+    {
+      "id": 2,
+      "name": "Puuro",
+      "author": "Cristobal",
+      "description": "Soggy soup made from oat",
+      "image": "urlurl",
+
+      "ingredients": {
+        "ingredient": ["Oat", "Spoon"],
+        "ingredient2": ["Milk", "Gulp"]
+      },
+      "instructions": "Boil in a pan with milk/water"
     }
   ],
   "comments": [
