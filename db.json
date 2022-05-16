@@ -6,6 +6,7 @@
       "author": "Gunther",
       "description": "A succulent and mouth melting fusion between bread and beef",
       "image": "https://source.unsplash.com/-YHSwy6uqvk/640x360/",
+      "country": "Usa",
       "ingredients": [
         {
           "type": "Beef",
@@ -22,6 +23,7 @@
       "id": 2,
       "name": "Puuro",
       "author": "Marco",
+      "country": "Fiji",
       "description": "Soggy mess of oats and boiling water",
       "image": "https://source.unsplash.com/t-0rX27Xiy0/640x360/",
       "ingredients": [
@@ -37,141 +39,19 @@
       "instructions": "Boil water and pour it on oatflakes"
     },
     {
-      "name": "asd",
-      "author": "ads",
-      "country": "",
-      "description": "asd",
-      "image": "asd",
+      "name": "Stake au vin",
+      "author": "Liisa Liisanen",
+      "country": "Kiribati",
+      "description": "Just a stake bro",
+      "image": "asdfsdfa",
       "ingredients": [
         {
-          "type": "",
-          "amount": ""
+          "type": "Steak",
+          "amount": "5 fist fulls"
         }
       ],
-      "instructions": "asd",
+      "instructions": "Pan -> burn",
       "id": 3
-    },
-    {
-      "name": "asdasdasd",
-      "author": "asdads",
-      "country": "",
-      "description": "asddsadsa",
-      "image": "adsdsa",
-      "ingredients": [
-        {
-          "type": "",
-          "amount": ""
-        }
-      ],
-      "instructions": "adsds",
-      "id": 4
-    },
-    {
-      "name": "dfggfdgdf",
-      "author": "gdfdgffgd",
-      "country": {
-        "selectedCountry": ""
-      },
-      "description": "gdfgdfgdf",
-      "image": "dgfgdf",
-      "ingredients": [
-        {
-          "type": "",
-          "amount": ""
-        }
-      ],
-      "instructions": "gdfgdf",
-      "id": 5
-    },
-    {
-      "name": "asdasdadsads",
-      "author": "dsfafads",
-      "country": "",
-      "description": "asf",
-      "image": "safd",
-      "ingredients": [
-        {
-          "type": "",
-          "amount": ""
-        }
-      ],
-      "instructions": "safdfsd",
-      "id": 6
-    },
-    {
-      "name": "asd",
-      "author": "asd",
-      "country": "",
-      "description": "asd",
-      "image": "dsa",
-      "ingredients": [
-        {
-          "type": "",
-          "amount": ""
-        }
-      ],
-      "instructions": "",
-      "id": 7
-    },
-    {
-      "name": "asd",
-      "author": "dsa",
-      "country": "",
-      "description": "ads",
-      "image": "ads",
-      "ingredients": [
-        {
-          "type": "",
-          "amount": ""
-        }
-      ],
-      "instructions": "",
-      "id": 8
-    },
-    {
-      "name": "",
-      "author": "",
-      "country": "Algeria",
-      "description": "",
-      "image": "",
-      "ingredients": [
-        {
-          "type": "",
-          "amount": ""
-        }
-      ],
-      "instructions": "",
-      "id": 9
-    },
-    {
-      "name": "",
-      "author": "",
-      "country": "Argentina",
-      "description": "",
-      "image": "",
-      "ingredients": [
-        {
-          "type": "",
-          "amount": ""
-        }
-      ],
-      "instructions": "",
-      "id": 10
-    },
-    {
-      "name": "",
-      "author": "",
-      "country": "Armenia",
-      "description": "",
-      "image": "",
-      "ingredients": [
-        {
-          "type": "",
-          "amount": ""
-        }
-      ],
-      "instructions": "",
-      "id": 11
     }
   ]
 }

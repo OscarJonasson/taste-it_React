@@ -27,6 +27,7 @@ const Recipes = () => {
             foodName={food.name}
             description={food.description}
             image={food.image}
+            country={food.country}
           />
         );
       })}

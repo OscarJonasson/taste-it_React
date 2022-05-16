@@ -5,12 +5,10 @@ function AddNewRecipe() {
   const [countries, setCountries] = useState([]);
   let [selectedCountry, setSelectedCountry] = useState('');
 
-  const [typeAmount, setTypeAmount] = useState([
-    {
-      type: '',
-      amount: '',
-    },
-  ]);
+  const [typeAmount, setTypeAmount] = useState({
+    type: '',
+    amount: '',
+  });
 
   const [formData, setFormData] = useState({
     name: '',
@@ -18,12 +16,7 @@ function AddNewRecipe() {
     country: '',
     description: '',
     image: '',
-    ingredients: [
-      {
-        type: '',
-        amount: '',
-      },
-    ],
+    ingredients: [],
     instructions: '',
   });
 
@@ -48,6 +41,10 @@ function AddNewRecipe() {
   useEffect(() => {
     setFormData({ ...formData, country: selectedCountry });
   }, [selectedCountry]);
+
+  useEffect(() => {
+    setFormData({ ...formData, ingredients: typeAmount });
+  }, [typeAmount]);
 
   // ??????
   // Bit more complicated event handler for getting data from ingredients. First, we spread the current ingredients state and then look for that specific object in the array. We use the index, which is passed to the event handler. After updating the value in inputs, we will overwrite the Data state and add the ingredients array.
@@ -113,7 +110,9 @@ function AddNewRecipe() {
       .then(res => console.log(res))
       .catch(err => console.log(err));
   };
+
   console.log(formData);
+
   return (
     <form onSubmit={send}>
       <div className={classes.separator}>
@@ -162,7 +161,7 @@ function AddNewRecipe() {
           onChange={inputTypeHandler}
           type="text"
           id="amount"
-          name="ingredients[amount]"
+          name="amount"
         />
       </div>
       <div className={classes.separator}>
@@ -171,9 +170,10 @@ function AddNewRecipe() {
           onChange={inputTypeHandler}
           type="text"
           id="ingredient"
-          name="ingredients[type]"
+          name="type"
         />
       </div>
+
       <div className={classes.separator}>
         <label htmlFor="instructions">Instructions</label>
         <textarea
