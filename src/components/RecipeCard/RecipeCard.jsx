@@ -6,7 +6,7 @@ function RecipeCard(props) {
     <div className={classes.recipeCard}>
       <img
         className={classes.recipeCard__img}
-        src="https://source.unsplash.com/-YHSwy6uqvk/640x426/"
+        src={props.image}
         alt={props.foodName}
       ></img>
       <h4>{props.foodName}</h4>

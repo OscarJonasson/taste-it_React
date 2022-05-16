@@ -1,10 +1,10 @@
 import RecipeCard from '../RecipeCard/RecipeCard';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 
 const Recipes = () => {
   const [data, setData] = useState([]);
-  const [isLoading, setIsLoading] = useState();
 
   useEffect(() => {
     axios
@@ -12,9 +12,6 @@ const Recipes = () => {
       .then(res => setData(res.data))
       .catch(err => console.log(err));
   }, []);
-
-  // console.log('trying to log', data[0]?.name);
-  console.log('trying to log', data);
 
   return (
     <>
@@ -29,10 +26,10 @@ const Recipes = () => {
             link={food.id}
             foodName={food.name}
             description={food.description}
+            image={food.image}
           />
         );
       })}
-      ;
     </>
   );
 };

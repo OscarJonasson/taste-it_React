@@ -17,7 +17,7 @@
 
 .recipeCard__img {
   object-fit: cover;
-  height: 150px;
+  max-height: 130px;
 }
 
 .recipeCard__desc {

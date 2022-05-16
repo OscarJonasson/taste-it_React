@@ -1,24 +1,25 @@
 import classes from './Recipe.module.css';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 
 function Recipe() {
   const [data, setData] = useState([]);
+  const { id } = useParams();
 
-  const $id = 1;
   useEffect(() => {
     axios
-      .get(`http://localhost:3011/recipe/${$id}`)
+      .get(`http://localhost:3011/recipe/${id}`)
       .then(res => setData(res.data))
       .catch(err => console.log(err));
   }, []);
-  console.log(data);
+
   return (
     <div className={classes.recipe}>
       <div className={classes.recipe__left}>
         <img
           className={classes.recipe__img}
-          src="https://source.unsplash.com/-YHSwy6uqvk/640x360/"
+          src={data.image}
           alt={data.name}
         ></img>
         <h4>Ingredients</h4>
