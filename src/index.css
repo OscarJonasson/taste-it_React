@@ -18,4 +18,5 @@ body {
     rgb(69, 69, 69)
   );
   background-repeat: no-repeat;
+  background-attachment: fixed;
 }

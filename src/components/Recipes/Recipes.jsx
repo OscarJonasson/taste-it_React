@@ -1,11 +1,11 @@
 import RecipeCard from '../RecipeCard/RecipeCard';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
 import classes from './Recipes.module.css';
 
 const Recipes = () => {
   const [data, setData] = useState([]);
+  const [search, setSearch] = useState('');
 
   useEffect(() => {
     axios
@@ -14,6 +14,11 @@ const Recipes = () => {
       .catch(err => console.log(err));
   }, []);
 
+  const inputSearch = e => {
+    setSearch(e.target.value);
+  };
+  console.log(data);
+
   return (
     <>
       <div className={classes.search}>
@@ -21,6 +26,7 @@ const Recipes = () => {
           <h3 className={classes.search__heading}>Search for a recipe</h3>
         </label>
         <input
+          onChange={inputSearch}
           className={classes.search__input}
           type="text"
           id="search"
@@ -28,18 +34,25 @@ const Recipes = () => {
         />
       </div>
       <div className={classes.recipeCard__container}>
-        {data.map(food => {
-          return (
-            <RecipeCard
-              key={food.id}
-              link={food.id}
-              foodName={food.name}
-              description={food.description}
-              image={food.image}
-              country={food.country}
-            />
-          );
-        })}
+        {data
+          .filter(data => {
+            if (search === '') {
+              return data;
+            }
+            return data.name.toLowerCase().includes(search.toLowerCase());
+          })
+          .map(food => {
+            return (
+              <RecipeCard
+                key={food.id}
+                link={food.id}
+                foodName={food.name}
+                description={food.description}
+                image={food.image}
+                country={food.country}
+              />
+            );
+          })}
       </div>
     </>
   );

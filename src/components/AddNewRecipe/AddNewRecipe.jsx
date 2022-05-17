@@ -5,10 +5,13 @@ function AddNewRecipe() {
   const [countries, setCountries] = useState([]);
   let [selectedCountry, setSelectedCountry] = useState('');
 
-  const [typeAmount, setTypeAmount] = useState({
-    type: '',
-    amount: '',
-  });
+  const [typeAmount, setTypeAmount] = useState([
+    {
+      id: 1,
+      type: '',
+      amount: '',
+    },
+  ]);
 
   const [formData, setFormData] = useState({
     name: '',
@@ -27,13 +30,6 @@ function AddNewRecipe() {
     });
   };
 
-  const inputTypeHandler = e => {
-    setTypeAmount({
-      ...typeAmount,
-      [e.target.name]: e.target.value,
-    });
-  };
-
   const inputCountryHandler = e => {
     setSelectedCountry(e.target.value);
   };
@@ -42,24 +38,13 @@ function AddNewRecipe() {
     setFormData({ ...formData, country: selectedCountry });
   }, [selectedCountry]);
 
-  useEffect(() => {
+  const changeIncData = (e, i) => {
+    const { name, value } = e.target;
+    const incList = [...typeAmount];
+    incList[i][name] = value;
+    setTypeAmount(incList);
     setFormData({ ...formData, ingredients: typeAmount });
-  }, [typeAmount]);
-
-  // ??????
-  // Bit more complicated event handler for getting data from ingredients. First, we spread the current ingredients state and then look for that specific object in the array. We use the index, which is passed to the event handler. After updating the value in inputs, we will overwrite the Data state and add the ingredients array.
-  // const changeIncData = (e, i) => {
-  //   const { name, value } = e.target;
-  //   const incList = [...ingredients];
-  //   incList[i][name] = value;
-  //   setIngredients(incList);
-  //   setData({ ...data, inc: ingredients });
-  // };
-
-  // const changeIngredients = (e, i) => {
-  //   const { type, value } = e.target;
-
-  // };
+  };
 
   useEffect(() => {
     axios
@@ -73,37 +58,6 @@ function AddNewRecipe() {
       .catch(err => console.log(err));
   }, []);
 
-  // mapping languages into select field for some reason...
-  // useEffect(() => {
-  //   axios
-  //     .get('https://restcountries.com/v3.1/all?fields=languages')
-  //     .then(
-  //       res =>
-  //         res.data?.map(languages => {
-  //           for (let language in languages.languages) {
-  //             console.log(languages.languages[language]);
-  //           }
-  //         })
-  //       // console.log(res.data?.[0].languages)
-  //     )
-  //     .catch(err => console.log(err));
-  // }, []);
-
-  // useEffect(() => {
-  //   axios
-  //     .get('https://restcountries.com/v3.1/name/sweden?fields=languages')
-  //     .then(res =>
-  //       res.data?.map(languages => {
-  //         console.log(languages);
-  //         // console.log(languages?.languages);
-  //         for (let language in languages.languages) {
-  //           console.log(languages.languages[language]);
-  //         }
-  //       })
-  //     )
-  //     .catch(err => console.log(err));
-  // }, []);
-
   const send = () => {
     axios
       .post('http://localhost:3011/recipe', formData)
@@ -111,8 +65,11 @@ function AddNewRecipe() {
       .catch(err => console.log(err));
   };
 
-  console.log(formData);
-
+  const addMore = e => {
+    e.preventDefault();
+    const newInc = { id: typeAmount.length + 1, type: '', amount: '' };
+    setTypeAmount([...typeAmount, newInc]);
+  };
   return (
     <form className={classes.form} onSubmit={send}>
       <div className={classes.separator}>
@@ -135,7 +92,7 @@ function AddNewRecipe() {
           className={classes.select}
           onChange={inputCountryHandler}
         >
-          <option selected disabled>
+          <option selected disabled hidden>
             Please select a country
           </option>
           {countries.sort().map(country => {
@@ -160,22 +117,36 @@ function AddNewRecipe() {
           name="image"
         />
       </div>
-      <div className={classes.separator}>
-        <label htmlFor="ingredient">Ingredient</label>
+      {typeAmount.map((_, i) => {
+        return (
+          <div key={i}>
+            <div className={classes.separator}>
+              <label htmlFor="ingredient">Ingredient</label>
+              <input
+                onChange={e => changeIncData(e, i)}
+                type="text"
+                id="ingredient"
+                name="type"
+              />
+            </div>
+            <div className={classes.separator}>
+              <label htmlFor="amount">Amount</label>
+              <input
+                onChange={e => changeIncData(e, i)}
+                type="text"
+                id="amount"
+                name="amount"
+              />
+            </div>
+          </div>
+        );
+      })}
+      <div className={classes.form__btnCont}>
         <input
-          onChange={inputTypeHandler}
-          type="text"
-          id="ingredient"
-          name="type"
-        />
-      </div>
-      <div className={classes.separator}>
-        <label htmlFor="amount">Amount</label>
-        <input
-          onChange={inputTypeHandler}
-          type="text"
-          id="amount"
-          name="amount"
+          className={classes.form__btn}
+          type="button"
+          value={'Add more'}
+          onClick={addMore}
         />
       </div>
 

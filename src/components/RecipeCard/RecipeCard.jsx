@@ -8,7 +8,6 @@ function RecipeCard(props) {
   axios
     .get(`https://restcountries.com/v3.1/name/${props.country}`)
     .then(res => setFlag(res.data?.[0].flags.svg));
-  // console.log(flag);
 
   return (
     <div className={classes.recipeCard}>
@@ -21,7 +20,7 @@ function RecipeCard(props) {
         <h4>{props.foodName}</h4>
         <p className={classes.recipeCard__desc}>{props.description}</p>
       </div>
-      <Link className={classes.recipeCard__link} to={props.link}>
+      <Link className={classes.recipeCard__link} to={`${props.link}`}>
         See More
       </Link>
       <img

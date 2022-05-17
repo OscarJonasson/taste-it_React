@@ -42,7 +42,7 @@
       "name": "Steak",
       "author": "Liisa Liisanen",
       "country": "Kiribati",
-      "description": "Just a stake bro",
+      "description": "Just a steak bro",
       "image": "asdfsdfa",
       "ingredients": [
         {
@@ -67,17 +67,56 @@
       "id": 4
     },
     {
-      "name": "",
-      "author": "",
-      "country": "",
-      "description": "asdasd",
-      "image": "",
-      "ingredients": {
-        "type": "",
-        "amount": ""
-      },
-      "instructions": "",
+      "name": "Moilanen",
+      "author": "Riisto",
+      "country": "Anguilla",
+      "description": "Something something somethign",
+      "image": "ASDFFASD",
+      "ingredients": [
+        {
+          "id": 1,
+          "type": "Kiwi",
+          "amount": "3scoops"
+        },
+        {
+          "id": 2,
+          "type": "Kiwi",
+          "amount": "3scoops"
+        }
+      ],
+      "instructions": "scoop --> mouth",
       "id": 5
+    },
+    {
+      "name": "asddas",
+      "author": "adsads",
+      "country": "American Samoa",
+      "description": "adsdas",
+      "image": "adsads",
+      "ingredients": [
+        {
+          "id": 1,
+          "type": "adsdas",
+          "amount": "adsdas"
+        },
+        {
+          "id": 2,
+          "type": "adsdas",
+          "amount": "dasdas"
+        },
+        {
+          "id": 3,
+          "type": "adsads",
+          "amount": "adssda"
+        },
+        {
+          "id": 4,
+          "type": "asdasd",
+          "amount": "adsdas"
+        }
+      ],
+      "instructions": "asddsa",
+      "id": 6
     }
   ]
 }
