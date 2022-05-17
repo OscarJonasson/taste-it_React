@@ -1,4 +1,43 @@
+main {
+  /* height: 100vh; */
+}
+.form {
+  margin-top: 2rem;
+  width: 400px;
+  color: aliceblue;
+  height: 100vh;
+}
+
 .separator {
   display: flex;
+  justify-content: space-between;
   flex-flow: row wrap;
+  margin: 1rem 0;
+}
+
+input,
+textarea,
+.select {
+  width: 200px;
+  height: 2rem;
+  border-radius: 5px;
+  border-style: none;
+  padding: 5px;
+  font-family: 'Lato', sans-serif;
+}
+textarea {
+  height: 5rem;
+}
+.form__btnCont {
+  display: flex;
+  justify-content: center;
+}
+.form__btn {
+  border-radius: 10px;
+  border: 2px solid #663399;
+  padding: 0.5rem;
+  color: white;
+  background-image: linear-gradient(90deg, #663399, #7f3bc3);
+  transition: 1s;
+  margin: 1rem;
 }

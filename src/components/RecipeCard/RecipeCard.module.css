@@ -6,19 +6,29 @@
   flex-flow: column nowrap;
   border: 2px solid gray;
   width: 250px;
+  height: 290px;
   padding: 1rem;
   background-image: linear-gradient(
     180deg,
-    rgb(147, 148, 148),
-    rgb(122, 122, 122)
+    rgb(227, 226, 226),
+    rgb(196, 196, 196)
   );
   border-radius: 3px;
+  border: #4a2471 solid 1px;
   margin: 1rem;
 }
 
 .recipeCard__img {
   object-fit: cover;
   max-height: 130px;
+}
+
+.recipeCard__info {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-flow: column nowrap;
+  margin: 1rem 0;
 }
 
 .recipeCard__desc {

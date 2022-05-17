@@ -114,7 +114,7 @@ function AddNewRecipe() {
   console.log(formData);
 
   return (
-    <form onSubmit={send}>
+    <form className={classes.form} onSubmit={send}>
       <div className={classes.separator}>
         <label htmlFor="name">Name</label>
         <input onChange={inputFormHandler} type="text" id="name" name="name" />
@@ -129,7 +129,12 @@ function AddNewRecipe() {
         />
       </div>
       <div className={classes.separator}>
-        <select onChange={inputCountryHandler}>
+        <label htmlFor="select">Country</label>
+        <select
+          id="select"
+          className={classes.select}
+          onChange={inputCountryHandler}
+        >
           <option selected disabled>
             Please select a country
           </option>
@@ -156,21 +161,21 @@ function AddNewRecipe() {
         />
       </div>
       <div className={classes.separator}>
-        <label htmlFor="amount">Amount</label>
-        <input
-          onChange={inputTypeHandler}
-          type="text"
-          id="amount"
-          name="amount"
-        />
-      </div>
-      <div className={classes.separator}>
         <label htmlFor="ingredient">Ingredient</label>
         <input
           onChange={inputTypeHandler}
           type="text"
           id="ingredient"
           name="type"
+        />
+      </div>
+      <div className={classes.separator}>
+        <label htmlFor="amount">Amount</label>
+        <input
+          onChange={inputTypeHandler}
+          type="text"
+          id="amount"
+          name="amount"
         />
       </div>
 
@@ -182,7 +187,9 @@ function AddNewRecipe() {
           id="instructions"
         />
       </div>
-      <input type="submit" value="Send" />
+      <div className={classes.form__btnCont}>
+        <input className={classes.form__btn} type="submit" value="Send" />
+      </div>
     </form>
   );
 }

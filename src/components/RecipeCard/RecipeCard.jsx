@@ -14,15 +14,16 @@ function RecipeCard(props) {
     <div className={classes.recipeCard}>
       <img
         className={classes.recipeCard__img}
-        src={props.image}
+        src={`https://source.unsplash.com/640x360/?${props.foodName}`}
         alt={props.foodName}
       ></img>
-      <h4>{props.foodName}</h4>
-      <p className={classes.recipeCard__desc}>{props.description}</p>
-      <Link className={classes.recipeCard__link} to={`${props.link}`}>
+      <div className={classes.recipeCard__info}>
+        <h4>{props.foodName}</h4>
+        <p className={classes.recipeCard__desc}>{props.description}</p>
+      </div>
+      <Link className={classes.recipeCard__link} to={props.link}>
         See More
       </Link>
-      <p>{props.country}</p>
       <img
         className={classes.recipeCard__flag}
         src={flag}

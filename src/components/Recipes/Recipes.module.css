@@ -1,0 +1,35 @@
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+}
+.search {
+  margin: 1rem;
+}
+
+.search__heading {
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.search__input {
+  width: 20rem;
+  height: 2rem;
+  border-radius: 3px;
+  padding: 10px;
+  font-family: 'Lato', sans-serif;
+  border-style: none;
+}
+
+.recipeCard__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}

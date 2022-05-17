@@ -21,7 +21,7 @@
     },
     {
       "id": 2,
-      "name": "Puuro",
+      "name": "Porridge",
       "author": "Marco",
       "country": "Fiji",
       "description": "Soggy mess of oats and boiling water",
@@ -39,7 +39,7 @@
       "instructions": "Boil water and pour it on oatflakes"
     },
     {
-      "name": "Stake au vin",
+      "name": "Steak",
       "author": "Liisa Liisanen",
       "country": "Kiribati",
       "description": "Just a stake bro",
@@ -52,6 +52,32 @@
       ],
       "instructions": "Pan -> burn",
       "id": 3
+    },
+    {
+      "name": "Chicken steak",
+      "author": "Matti Moilanen",
+      "country": "Nauru",
+      "description": "Nice chicken",
+      "image": "image",
+      "ingredients": {
+        "type": "1 whole",
+        "amount": "chicken"
+      },
+      "instructions": "Close oven",
+      "id": 4
+    },
+    {
+      "name": "",
+      "author": "",
+      "country": "",
+      "description": "asdasd",
+      "image": "",
+      "ingredients": {
+        "type": "",
+        "amount": ""
+      },
+      "instructions": "",
+      "id": 5
     }
   ]
 }

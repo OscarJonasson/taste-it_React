@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
-function Recipe() {
+function Recipe(props) {
   const [data, setData] = useState([]);
   const { id } = useParams();
 
@@ -22,7 +22,7 @@ function Recipe() {
           src={data.image}
           alt={data.name}
         ></img>
-        <h4>Ingredients</h4>
+        <h4 className={classes.ingredients__heading}>Ingredients</h4>
         <ul className={classes.recipe__ingredients}>
           {data.ingredients?.map(ingredient => (
             <li>
@@ -37,6 +37,7 @@ function Recipe() {
         <h4>Preparation</h4>
         <p className={classes.recipe__preparation}>{data.instructions}</p>
       </div>
+      {/* <img src={flag}></img> */}
     </div>
   );
 }
