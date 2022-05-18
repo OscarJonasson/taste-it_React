@@ -1,7 +1,7 @@
 import classes from './Recipe.module.css';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 function Recipe(props) {
   const [data, setData] = useState([]);
@@ -36,6 +36,9 @@ function Recipe(props) {
         <p className={classes.recipe__desc}>{data.description}</p>
         <h4>Preparation</h4>
         <p className={classes.recipe__preparation}>{data.instructions}</p>
+        <Link className={classes.goback} to="/recipes">
+          Go back
+        </Link>
       </div>
       {/* <img src={flag}></img> */}
     </div>

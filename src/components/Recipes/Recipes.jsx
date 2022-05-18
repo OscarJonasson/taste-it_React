@@ -17,7 +17,6 @@ const Recipes = () => {
   const inputSearch = e => {
     setSearch(e.target.value);
   };
-  console.log(data);
 
   return (
     <>
@@ -36,7 +35,7 @@ const Recipes = () => {
       <div className={classes.recipeCard__container}>
         {data
           .filter(data => {
-            if (search === '') {
+            if (search === '' || search.length < 2) {
               return data;
             }
             return data.name.toLowerCase().includes(search.toLowerCase());
