@@ -1,2 +1,2 @@
 # tasteIT
-A site to keep track of your recieps
+A site to keep track of your recipes
