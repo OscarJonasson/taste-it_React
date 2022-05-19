@@ -1,11 +1,12 @@
 import classes from './Recipe.module.css';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams, useLocation } from 'react-router-dom';
 
 function Recipe(props) {
   const [data, setData] = useState([]);
   const { id } = useParams();
+  const location = useLocation();
 
   useEffect(() => {
     axios
@@ -17,15 +18,16 @@ function Recipe(props) {
   return (
     <div className={classes.recipe}>
       <div className={classes.recipe__left}>
+        <img className={classes.recipe__img} src={data.image} alt={data.name} />
         <img
-          className={classes.recipe__img}
-          src={data.image}
-          alt={data.name}
-        ></img>
+          className={classes.recipe__imgFlag}
+          src={location.state.flag ?? ''}
+          alt={`flag of ${data.country}`}
+        />
         <h4 className={classes.ingredients__heading}>Ingredients</h4>
         <ul className={classes.recipe__ingredients}>
           {data.ingredients?.map(ingredient => (
-            <li>
+            <li key={ingredient.id}>
               {ingredient.amount} of {ingredient.type}
             </li>
           ))}
@@ -40,7 +42,6 @@ function Recipe(props) {
           Go back
         </Link>
       </div>
-      {/* <img src={flag}></img> */}
     </div>
   );
 }

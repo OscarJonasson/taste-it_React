@@ -20,7 +20,11 @@ function RecipeCard(props) {
         <h4>{props.foodName}</h4>
         <p className={classes.recipeCard__desc}>{props.description}</p>
       </div>
-      <Link className={classes.recipeCard__link} to={`${props.link}`}>
+      <Link
+        className={classes.recipeCard__link}
+        to={{ pathname: `${props.link}` }}
+        state={{ flag: flag }}
+      >
         See More
       </Link>
       <img

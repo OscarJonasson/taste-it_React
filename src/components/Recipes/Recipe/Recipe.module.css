@@ -20,6 +20,7 @@
   margin: 0.2rem;
 }
 .recipe__left {
+  position: relative;
   max-width: 50%;
 }
 
@@ -45,6 +46,17 @@
 
 .recipe__ingredients li:last-child {
   border-bottom: none;
+}
+
+.recipe__imgFlag {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  position: absolute;
+  top: -10px;
+  right: -15px;
+  object-position: 25%;
 }
 
 /* RIGHT
