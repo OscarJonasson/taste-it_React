@@ -70,6 +70,16 @@ function AddNewRecipe() {
     const newInc = { id: typeAmount.length + 1, type: '', amount: '' };
     setTypeAmount([...typeAmount, newInc]);
   };
+
+  const removeMore = (e, i) => {
+    e.preventDefault();
+    const remvInc = [...typeAmount];
+    if (remvInc.length >= 2) {
+      remvInc.splice(i, 1);
+      setTypeAmount(remvInc);
+    }
+  };
+
   return (
     <form className={classes.form} onSubmit={send}>
       <div className={classes.separator}>
@@ -141,13 +151,23 @@ function AddNewRecipe() {
           </div>
         );
       })}
-      <div className={classes.form__btnCont}>
-        <input
-          className={classes.form__btn}
-          type="button"
-          value={'Add more'}
-          onClick={addMore}
-        />
+      <div className={classes.separatorBtn}>
+        <div className={classes.form__btnCont}>
+          <input
+            className={classes.form__btnIng}
+            type="button"
+            value={'-'}
+            onClick={removeMore}
+          />
+        </div>
+        <div className={classes.form__btnCont}>
+          <input
+            className={classes.form__btnIng}
+            type="button"
+            value={'+'}
+            onClick={addMore}
+          />
+        </div>
       </div>
 
       <div className={classes.separator}>
