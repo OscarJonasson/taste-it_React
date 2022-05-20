@@ -84,7 +84,13 @@ function AddNewRecipe() {
     <form className={classes.form} onSubmit={send}>
       <div className={classes.separator}>
         <label htmlFor="name">Name</label>
-        <input onChange={inputFormHandler} type="text" id="name" name="name" />
+        <input
+          onChange={inputFormHandler}
+          type="text"
+          id="name"
+          name="name"
+          required
+        />
       </div>
       <div className={classes.separator}>
         <label htmlFor="author">Author</label>
@@ -93,6 +99,7 @@ function AddNewRecipe() {
           type="text"
           id="author"
           name="author"
+          required
         />
       </div>
       <div className={classes.separator}>
@@ -101,8 +108,9 @@ function AddNewRecipe() {
           id="select"
           className={classes.select}
           onChange={inputCountryHandler}
+          required
         >
-          <option selected disabled hidden>
+          <option hidden invalid="true">
             Please select a country
           </option>
           {countries.sort().map(country => {
@@ -116,6 +124,7 @@ function AddNewRecipe() {
           onChange={inputFormHandler}
           name="description"
           id="description"
+          required
         />
       </div>
       <div className={classes.separator}>
@@ -137,6 +146,7 @@ function AddNewRecipe() {
                 type="text"
                 id="ingredient"
                 name="type"
+                required
               />
             </div>
             <div className={classes.separator}>
@@ -146,6 +156,7 @@ function AddNewRecipe() {
                 type="text"
                 id="amount"
                 name="amount"
+                required
               />
             </div>
           </div>
@@ -176,6 +187,7 @@ function AddNewRecipe() {
           onChange={inputFormHandler}
           name="instructions"
           id="instructions"
+          required
         />
       </div>
       <div className={classes.form__btnCont}>
