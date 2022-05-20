@@ -33,6 +33,7 @@
 
 .recipeCard__desc {
   height: 48px;
+
   overflow: scroll;
   line-height: 1.5;
 }
@@ -51,8 +52,8 @@
 }
 
 .recipeCard__flag {
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   object-fit: cover;
   position: absolute;
