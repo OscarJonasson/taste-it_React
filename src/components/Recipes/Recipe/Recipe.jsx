@@ -7,6 +7,7 @@ function Recipe(props) {
   const [data, setData] = useState([]);
   const { id } = useParams();
   const location = useLocation();
+  const flag = location.state.flag;
 
   useEffect(() => {
     axios
@@ -21,14 +22,14 @@ function Recipe(props) {
         <img className={classes.recipe__img} src={data.image} alt={data.name} />
         <img
           className={classes.recipe__imgFlag}
-          src={location.state.flag ?? ''}
+          src={flag}
           alt={`flag of ${data.country}`}
         />
         <h4 className={classes.ingredients__heading}>Ingredients</h4>
         <ul className={classes.recipe__ingredients}>
           {data.ingredients?.map(ingredient => (
             <li key={ingredient.id}>
-              {ingredient.amount} of {ingredient.type}
+              {ingredient.amount} {'  '} {'   '} {ingredient.type}
             </li>
           ))}
         </ul>

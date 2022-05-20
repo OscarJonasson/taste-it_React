@@ -1,122 +1,158 @@
 {
   "recipe": [
     {
-      "id": 1,
-      "name": "Burger",
-      "author": "Gunther",
-      "description": "A succulent and mouth melting fusion between bread and beef",
-      "image": "https://source.unsplash.com/-YHSwy6uqvk/640x360/",
-      "country": "Usa",
-      "ingredients": [
-        {
-          "type": "Beef",
-          "amount": "400gr"
-        },
-        {
-          "type": "Bread",
-          "amount": "22 Buns"
-        }
-      ],
-      "instructions": "Loosely pack the meat and smash it on a smoking hot skillet"
-    },
-    {
-      "id": 2,
-      "name": "Porridge",
-      "author": "Marco",
-      "country": "Fiji",
-      "description": "Soggy mess of oats and boiling water",
-      "image": "https://source.unsplash.com/t-0rX27Xiy0/640x360/",
-      "ingredients": [
-        {
-          "type": "Oat",
-          "amount": "3 Cups"
-        },
-        {
-          "type": "Water",
-          "amount": "Boxfull"
-        }
-      ],
-      "instructions": "Boil water and pour it on oatflakes"
-    },
-    {
-      "name": "Steak",
-      "author": "Liisa Liisanen",
-      "country": "Kiribati",
-      "description": "Just a steak bro",
-      "image": "asdfsdfa",
-      "ingredients": [
-        {
-          "type": "Steak",
-          "amount": "5 fist fulls"
-        }
-      ],
-      "instructions": "Pan -> burn",
-      "id": 3
-    },
-    {
-      "name": "Chicken steak",
-      "author": "Matti Moilanen",
-      "country": "Nauru",
-      "description": "Nice chicken",
-      "image": "image",
-      "ingredients": {
-        "type": "1 whole",
-        "amount": "chicken"
-      },
-      "instructions": "Close oven",
-      "id": 4
-    },
-    {
-      "name": "Moilanen",
-      "author": "Riisto",
-      "country": "Anguilla",
-      "description": "Something something somethign",
-      "image": "ASDFFASD",
+      "name": "Grilled Carrots",
+      "author": "Rick Ristonen",
+      "country": "Sweden",
+      "description": "Sweet grilled carrots",
+      "image": "https://source.unsplash.com/XRk6OP3laTE/640x360/",
       "ingredients": [
         {
           "id": 1,
-          "type": "Kiwi",
-          "amount": "3scoops"
+          "type": "Carrots",
+          "amount": "1 kg"
         },
         {
           "id": 2,
-          "type": "Kiwi",
-          "amount": "3scoops"
-        }
-      ],
-      "instructions": "scoop --> mouth",
-      "id": 5
-    },
-    {
-      "name": "asddas",
-      "author": "adsads",
-      "country": "American Samoa",
-      "description": "adsdas",
-      "image": "adsads",
-      "ingredients": [
-        {
-          "id": 1,
-          "type": "adsdas",
-          "amount": "adsdas"
-        },
-        {
-          "id": 2,
-          "type": "adsdas",
-          "amount": "dasdas"
+          "type": "Honey",
+          "amount": "1 tbsp"
         },
         {
           "id": 3,
-          "type": "adsads",
-          "amount": "adssda"
+          "type": "Olive oil",
+          "amount": "Brush lightly"
         },
         {
           "id": 4,
-          "type": "asdasd",
-          "amount": "adsdas"
+          "type": "Salt and Pepper",
+          "amount": "To taste"
         }
       ],
-      "instructions": "asddsa",
-      "id": 6
+      "instructions": "Heat up your oven/grill to med-high heat.  Drizzle honey on top of the carrots, brush lightly with olive oil. Take out of oven when lightly charred.",
+      "id": 1
+    },
+    {
+      "name": "Chicken Quesadilla",
+      "author": "Miguel Peña",
+      "country": "Mexico",
+      "description": "A full quesadilla is made with two tortillas that hold a layer of cheese between them.",
+      "image": "https://source.unsplash.com/DESJBCkFkF8/640x360/",
+      "ingredients": [
+        {
+          "id": 1,
+          "type": "Chicken breast",
+          "amount": "500gr"
+        },
+        {
+          "id": 2,
+          "type": "Olive oil",
+          "amount": "1 Tbsp"
+        },
+        {
+          "id": 3,
+          "type": "Green Pepper",
+          "amount": "1 whole"
+        },
+        {
+          "id": 4,
+          "type": "Taco seasoning",
+          "amount": "2 Tbsp"
+        },
+        {
+          "id": 5,
+          "type": "Tortillas",
+          "amount": "5"
+        },
+        {
+          "id": 6,
+          "type": "Cheese of your choice",
+          "amount": "300gr"
+        }
+      ],
+      "instructions": "Prep chicken. Brush everything with olive oil. Use seasoning. Grill all the ingredients between the 2 tortillas. Eat",
+      "id": 2
+    },
+    {
+      "name": "Red Curry Chicken",
+      "author": "Tim Timmondson",
+      "country": "Thailand",
+      "description": "Five-ingredient red curry",
+      "image": "https://source.unsplash.com/YmyFBvW7oG8/640x360/",
+      "ingredients": [
+        {
+          "id": 1,
+          "type": "Coconut oil",
+          "amount": "2 Tbsp"
+        },
+        {
+          "id": 2,
+          "type": "Boneless chicken breast",
+          "amount": "1 package"
+        },
+        {
+          "id": 3,
+          "type": "Coconut cream",
+          "amount": "1 can"
+        },
+        {
+          "id": 4,
+          "type": "Red thai curry sauce",
+          "amount": "3 Tbsp"
+        },
+        {
+          "id": 5,
+          "type": "Rice noodles",
+          "amount": "1 package"
+        }
+      ],
+      "instructions": "Heat oil in a large skillet on high heat. Add chicken cubes; cook until browned, about 2 minutes per side. Reduce heat to medium-high and add coconut cream and curry sauce. Cook until chicken is no longer pink in the center and the juices run clear, about 5 minutes.",
+      "id": 3
+    },
+    {
+      "name": "Mac 'n cheese",
+      "author": "Morgan Richardson",
+      "country": "United States",
+      "description": "Macaroni and cheese dish.",
+      "image": "https://source.unsplash.com/4qzaeR_sTYA/640x360/",
+      "ingredients": [
+        {
+          "id": 1,
+          "type": "Macaroni",
+          "amount": "1 box"
+        },
+        {
+          "id": 2,
+          "type": "Butter",
+          "amount": "1 stick"
+        },
+        {
+          "id": 3,
+          "type": "AP flour",
+          "amount": "2 dl"
+        },
+        {
+          "id": 4,
+          "type": "Salt",
+          "amount": "1/2 Teaspoon"
+        },
+        {
+          "id": 5,
+          "type": "Ground black pepper",
+          "amount": "5 corns"
+        },
+        {
+          "id": 6,
+          "type": "Cheddar cheese",
+          "amount": "3 dl"
+        },
+        {
+          "id": 7,
+          "type": "Milk",
+          "amount": "4 dl"
+        }
+      ],
+      "instructions": "Bring a large pot of lightly salted water to a boil. Cook elbow macaroni in the boiling water, stirring occasionally until cooked through but firm to the bite, 8 minutes.\n\nAt the same time, melt butter in a saucepan over medium heat. Add flour, salt, and pepper and stir until smooth, about 5 minutes. Pour in milk slowly, while stirring continuously. Continue to cook and stir until mixture is smooth and bubbling, about 5 minutes, making sure the milk doesn't burn.\n\nAdd Cheddar cheese and stir until melted, 2 to 4 minutes.\n\n\nDrain macaroni and fold into cheese sauce until coated.",
+      "id": 4
     }
   ]
 }

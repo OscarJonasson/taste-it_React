@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import classes from './Header.module.css';
+import logo from '../../assets/img/tasteLogo.svg';
 
 const Header = () => {
   return (
@@ -13,7 +14,7 @@ const Header = () => {
             }
             to="/"
           >
-            TasteIT🍆
+            <img src={logo} alt="fork logo for the site"></img>
           </NavLink>
         </div>
         <ul className={classes.links}>

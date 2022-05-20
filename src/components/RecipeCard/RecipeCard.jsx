@@ -13,7 +13,7 @@ function RecipeCard(props) {
     <div className={classes.recipeCard}>
       <img
         className={classes.recipeCard__img}
-        src={`https://source.unsplash.com/640x360/?${props.foodName}`}
+        src={props.image}
         alt={props.foodName}
       ></img>
       <div className={classes.recipeCard__info}>
