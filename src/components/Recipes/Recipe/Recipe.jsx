@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { Link, useParams, useLocation } from 'react-router-dom';
 
-function Recipe(props) {
+function Recipe() {
   const [data, setData] = useState([]);
   const { id } = useParams();
   const location = useLocation();

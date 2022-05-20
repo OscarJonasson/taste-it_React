@@ -1,11 +1,7 @@
-main {
-  /* height: 100vh; */
-}
 .form {
   margin-top: 2rem;
   width: 400px;
   color: aliceblue;
-  height: auto;
 }
 
 .separator {

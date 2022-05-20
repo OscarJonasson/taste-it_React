@@ -3,7 +3,7 @@ import Layout from './pages/Layout';
 import Home from './components/Home/Home.jsx';
 import Recipes from './components/Recipes/Recipes.jsx';
 import Recipe from './components/Recipes/Recipe/Recipe.jsx';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import AddNewRecipe from './components/AddNewRecipe/AddNewRecipe';
 
 function App() {
